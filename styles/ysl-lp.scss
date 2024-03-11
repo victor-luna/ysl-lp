@@ -1,0 +1,166 @@
+@import "./reset";
+@import "./fonts";
+
+.section1 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1600px;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  overflow: hidden;
+
+  &__form {
+    max-width: 800px;
+    width: 100%;
+    min-height: 750px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    font-family: "MyriadPro-Regular";
+    text-align: center;
+    letter-spacing: 7.43px;
+    color: #fefefe;
+    font-size: 12.38px;
+    margin-bottom: 16px;
+  }
+
+  &__subTitle {
+    text-align: center;
+    letter-spacing: 0.82px;
+    color: #ffffff;
+    font-size: 32.98px;
+    max-width: 540px;
+    margin-bottom: 42px;
+  }
+
+  &__formWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    input {
+      box-sizing: border-box;
+      max-width: 332px;
+      height: 47px;
+      background: #00000000 0% 0% no-repeat padding-box;
+      border: 3px solid rgba(255, 255, 255, 0.5); 
+      border-radius: 8px;
+      padding: 0 16px;
+      color: #fff;
+    }
+    
+    input::placeholder {
+      text-align: left;
+      letter-spacing: 0px;
+      color: #ffffff;
+    }
+    
+
+    &__checkbox {
+      display: flex;
+      max-width: 373px;
+      width: 100%;
+
+      label {
+        margin: 6px 0 0 6px;
+        text-align: left;
+        letter-spacing: 0px;
+        color: #ffffff;
+        opacity: 1;
+        font-size: 12px;
+      }
+    }
+
+    #newsletter {
+      position: relative;
+      max-width: 25px;
+      max-height: 25px;
+      min-width: 25px;
+      min-height: 25px;
+      border: 3px solid #ffffff;
+      padding: 0;
+      appearance: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+      background-color: #000;
+      opacity: 0.5;
+      border-radius: 0;
+
+      &:checked::before {
+        content: "\2713"; /* Caractere Unicode para o "tick" ✔ */
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 40px;
+
+    button {
+      font-family: "ITCAvantGardeStd-Demi";
+      width: 169px;
+      height: 44px;
+      border: 1px solid #FFFFFF;
+      border-radius: 5px;
+      opacity: 1;
+      text-align: center;
+      letter-spacing: 0.67px;
+      color: #FEFEFE;
+      background: transparent;
+    }
+  }
+
+  &__copyright {
+    max-width: 501px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-size: 10px;
+  }
+
+  &__timer {
+    position: relative;
+
+    img {
+      display: block;
+      max-width: 100%;
+      min-width: 615px;
+    }
+    .countdown-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: transparent;
+      padding: 20px;
+      text-align: center;
+      font-size: 116px;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      text-shadow: 1px 7px 59px #0000001A;
+      opacity: 1;
+    }
+  }
+}
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://image.mail.yslbeauty.com.br/lib/fe9612737565077872/m/1/5e4fdff2-a976-4265-8859-dfcb7030c43a.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://image.mail.yslbeauty.com.br/lib/fe9612737565077872/m/1/9a95a972-fb3e-45d1-8741-cdb339b777c2.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://image.mail.yslbeauty.com.br/lib/fe9612737565077872/m/1/782b4e6f-4e65-4a3a-95f8-d2d6dd3f12a4.png"
+    />
+    <link rel="stylesheet" href="./ysl-lp.css" />
+
+    <title>Yves Saint Laurent</title>
+  </head>
+
+  <body>
+    <div class="section1">
+      <div class="section1__timer">
+        <img src="./assets/timer.png" alt="Cronômetro" />
+        <div class="countdown-container">
+          <span id="countdown"></span>
+        </div>
+      </div>
+
+      <div class="section1__form">
+        <form id="cadastroForm">
+          <p class="section1__title">O NOVO ÍCONE</p>
+          <h2 class="section1__subTitle">
+            A NOVA AFIRMAÇÃO DA MASCULINIDADE MODERNA ESTÁ CHEGANDO
+          </h2>
+          <div class="section1__formWrapper">
+            <input
+              type="text"
+              placeholder="Nome"
+              id="nome"
+              name="nome"
+              class="section1__formWrapper_input"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              id="email"
+              name="email"
+              class="section1__formWrapper_input"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Telefone"
+              id="telefone"
+              name="telefone"
+              class="section1__formWrapper_input"
+              required
+            />
+            <div class="section1__formWrapper__checkbox">
+              <input
+                type="checkbox"
+                id="newsletter"
+                name="newsletter"
+                class="section1_checkboxInput control control-checkbox"
+              />
+              <label for="newsletter" class="section1_checkboxLabel"
+                >Aceito receber comunicações sobre produtos e serviços de YSL
+                Beauty, L'Oréal Brasil e suas marcas. Você pode cancelar a
+                assinatura a qualquer momento por meio do link disponibilizado
+                em nossas comunicações.</label
+              >
+            </div>
+          </div>
+
+          <div class="section1__submit">
+            <button>Cadastre-se</button>
+          </div>
+          <p class="section1__copyright">
+            A L’Oréal Brasil somente usará seus dados pessoais de acordo com sua
+            Política de Privacidade. Você precisará ter pelo menos 16
+            (dezesseis) anos para usar este serviço. O uso do presente site é
+            regido pelos nossos Termos de uso. YSL Beauty faz parte da L’Oréal
+            Brasil.*
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./ysl-lp.js"></script>
+  </body>
+</html>
