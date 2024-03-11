@@ -12,6 +12,10 @@
   overflow: hidden;
   margin: 0 auto;
 
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+
   &__form {
     max-width: 800px;
     width: 100%;
@@ -20,6 +24,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 1000px) {
+      max-width: unset;
+      width: 100%;
+      min-height: unset;
+      height: 100%;
+      padding: 70px 0 0;
+    }
     
     form {
       display: flex;
@@ -45,12 +57,20 @@
     font-size: 32.98px;
     max-width: 540px;
     margin-bottom: 42px;
+
+    @media (max-width: 1000px) {
+      font-size: 26px;
+    }
   }
 
   &__formWrapper {
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
 
     input {
       box-sizing: border-box;
@@ -118,6 +138,10 @@
     justify-content: center;
     margin: 40px 0 40px;
 
+    @media (max-width: 1000px) {
+      display: none;
+    }
+
     button {
       font-family: "ITCAvantGardeStd-Demi";
       width: 169px;
@@ -138,16 +162,35 @@
     letter-spacing: 0px;
     color: #FFFFFF;
     font-size: 10px;
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
 
   &__timer {
     position: relative;
 
-    img {
+    .timer-desktop {
       display: block;
       max-width: 100%;
       min-width: 615px;
+
+      @media (max-width: 1000px) {
+        display: none;
+        min-width: unset;
+        max-width: unset;
+      }
+      
     }
+
+    .timer-mobile {
+      @media (max-width: 1000px) {
+        display: block !important;
+        max-width: 100%;
+      }
+    }
+
     .countdown-container {
       position: absolute;
       top: 50%;
@@ -161,6 +204,10 @@
       color: #FFFFFF;
       text-shadow: 1px 7px 59px #0000001A;
       opacity: 1;
+
+      @media (max-width: 1000px) {
+        font-size: 60px;
+      }
     }
   }
 }
