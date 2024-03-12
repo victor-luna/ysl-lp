@@ -59,7 +59,7 @@
     margin-bottom: 42px;
 
     @media (max-width: 1000px) {
-      font-size: 26px;
+      font-size: 27px;
     }
   }
 
@@ -69,7 +69,7 @@
     gap: 16px;
 
     @media (max-width: 1000px) {
-      display: none;
+      // display: none;
     }
 
     input {
@@ -95,13 +95,18 @@
       max-width: 373px;
       width: 100%;
 
+      @media (max-width: 1000px) {
+        max-width: 332px;
+      }
+
       label {
-        margin: 6px 0 0 6px;
+        margin: 2px 0 0 6px;
         text-align: left;
         letter-spacing: 0px;
         color: #ffffff;
         opacity: 1;
         font-size: 12px;
+        line-height: 20px;
       }
     }
 
@@ -111,6 +116,7 @@
       max-height: 25px;
       min-width: 25px;
       min-height: 25px;
+      margin-left: 0;
       border: 3px solid #ffffff;
       padding: 0;
       appearance: none;
@@ -139,7 +145,7 @@
     margin: 40px 0 40px;
 
     @media (max-width: 1000px) {
-      display: none;
+      // display: none;
     }
 
     button {
@@ -159,12 +165,17 @@
   &__copyright {
     max-width: 501px;
     text-align: center;
-    letter-spacing: 0px;
-    color: #FFFFFF;
+    letter-spacing: 0;
+    color: #fff;
     font-size: 10px;
+    line-height: 16px;
+
 
     @media (max-width: 1000px) {
-      display: none;
+      max-width: 378px;
+      line-height: 15px;
+      font-size: 9px;
+      padding-bottom: 20px;  
     }
   }
 
