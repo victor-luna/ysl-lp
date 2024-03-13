@@ -28,20 +28,23 @@ window.addEventListener('DOMContentLoaded', () => {
     const targetDate = new Date(now.getFullYear(), 2, 31, 23, 59, 0);
     const timeDifference = targetDate - now;
 
+    let days = 0
+    let hours = 0
+    let minutes = 0
+
     if (timeDifference > 0) {
-      const days = String(
+      days = String(
         Math.floor(timeDifference / (1000 * 60 * 60 * 24)),
       ).padStart(2, '0');
-      const hours = String(
+      hours = String(
         Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
       ).padStart(2, '0');
-      const minutes = String(
+      minutes = String(
         Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60)),
       ).padStart(2, '0');
+    } 
 
-      // const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
-      countdownElement.innerHTML = `
+    countdownElement.innerHTML = `
       <div style="display: flex;">   
         <div>
           <div style="font-family: 'ITCAvantGardeStd-Demi">${days}</div>
@@ -57,11 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
           <div style="font-family: 'ITCAvantGardeStd-Demi">${minutes}</div>
           <div style="font-size: 23.35px; letter-spacing: 2.33px;">minutos</div>
         </div>
-      </div>
-    `;
-    } else {
-      countdownElement.innerText = 'Countdown expired!';
-    }
+      </div>`
   }
 
   form.addEventListener('submit', async (event) => {
@@ -76,21 +75,26 @@ window.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const body = JSON.stringify({
-      nome,
-      telefone,
-      email,
-      newsletter: newsletterChecked ? 'true' : 'false',
-    });
-
     submitButton.innerText = 'Enviando...';
     submitButton.disabled = true;
     submitButton.style.pointerEvents = 'none';
 
+    const fields = {
+      Nome: nome,
+      Telefone: telefone,
+      Email: email,
+      Optin_comunicacoes: newsletterChecked ? 'true' : 'false',
+    };
+
+    const data = JSON.stringify({
+      deName: "tb_LP_MYSLF",
+      fields
+    });
+
     try {
-      const response = await fetch('SUA_URL_DE_DESTINO', {
+      const response = await fetch('https://mc23wlq3mtfm1mbytpdvsrv-6kc4.pub.sfmc-content.com/cw5s1tgdas2', {
         method: 'POST',
-        body,
+        body: data,
       });
 
       if (!response.ok) {
