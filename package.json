@@ -1,36 +1,22 @@
 {
   "name": "ysl-lp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "build": "gulp build",
-    "dev": "gulp dev"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/victor-luna/ysl-lp.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/victor-luna/ysl-lp/issues"
-  },
-  "homepage": "https://github.com/victor-luna/ysl-lp#readme",
-  "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-cli": "^2.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-include": "^2.4.1",
-    "gulp-sass": "^5.1.0",
-    "gulp-uglify": "^3.0.2",
-    "sass": "^1.49.0"
+    "dev": "webpack --watch --mode development",
+    "build": "webpack --mode production"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@babel/preset-env": "^7.12.7",
-    "gulp-babel": "^8.0.0",
-    "gulp-sourcemaps": "^3.0.0"
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "babel-loader": "^8.3.0",
+    "css-loader": "^6.10.0",
+    "mini-css-extract-plugin": "^2.8.1",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.8.3",
+    "sass": "^1.52.1",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.4",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^4.10.0"
   }
 }
