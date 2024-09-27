@@ -111,8 +111,7 @@ window.addEventListener('DOMContentLoaded', () => {
         Swal.fire('Cadastro realizado com sucesso!', '', 'success');
       }
     } catch (error) {
-      console.error(error);
-      Swal.fire('Ops!', error.message, 'error');
+      Swal.fire('Ops!', 'E-mail já cadastrado!', 'error');
     } finally {
       submitButton.innerText = 'Cadastre-se';
       submitButton.disabled = false;
@@ -125,5 +124,5 @@ window.addEventListener('DOMContentLoaded', () => {
   updateCountdown();
 
   // Update the countdown every 10 seconds
-  setInterval(updateCountdown, 10000);
+  // setInterval(updateCountdown, 10000);
 });
