@@ -108,7 +108,9 @@ window.addEventListener('DOMContentLoaded', () => {
       } else if (responseData.statusCode === 500) {
         Swal.fire('Ops!', 'Revise seus dados e tente novamente!', 'error');
       } else {
-        Swal.fire('Cadastro realizado com sucesso!', '', 'success');
+        Swal.fire('Cadastro realizado com sucesso!', '', 'success').then(() => {
+          window.open('https://www.yslbeauty.com.br/perfume-masculino-ysl-myslf-eau-de-parfum/YSLBWW-28501YSL.html', '_blank');
+        });
       }
     } catch (error) {
       Swal.fire('Ops!', 'E-mail já cadastrado!', 'error');
